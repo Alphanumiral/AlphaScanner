@@ -5,6 +5,7 @@ Install Guide:
 2: run alphascanner.exe AS ADMINISTRATOR, automatically clicking through your inventory will not work if you do not run as administrator
 
 Usage Guide:
+Currently requires fullscreen or borderless 2560x1440p resolution
 Scanning currently on screen item:
 Click the "scan current <x>" button while on the corresponding item and wait a second or so
 
@@ -12,7 +13,7 @@ Click the "scan current <x>" button while on the corresponding item and wait a s
 Mass scanning your inventory:
 BE ON THE PAIMON MENU THE APPEARS WHEN YOU PRESS "ESCAPE" DURING GAMEPLAY
 Check every tickbox for the items you want and fill in the corresponding information
-Click the "Begin Mass Scan" button
+Click the "Begin Mass Scan" button. If needed, hold the 'q' key for a bit and it will interrupt the scanning process.
 
 Achievements:
 Optionally can merge with paimon.moe data. This is useful if you want to import your achievements while retaining your wish history, since uploading just the achievements would otherwise overwrite it
