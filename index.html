@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <script type = "text/javascript" src="alphaScanner.js"></script>
+    </head>
+    <h1>Scan Settings</h1>
+    <input type="checkbox" id="Achievements" name="Achievements">
+    <label for="Achievements"> Achievements</label><br>
+
+    <input type="checkbox" id="AchievementMerge" name="AchievementMerge">
+    <label for="PaimonMoeData"> Merge achievement data into paimon.moe downloaded data</label>
+    <input type="file" id="PaimonMoeData" name="PaimonMoeData" accept=".json"><br><br>
+
+    <input type="checkbox" id="Characters" name="Characters">
+    <label for="Characters"> Characters</label><br>
+    <input type="text" id="travelerName" name="travelerName">
+    <label for="travelerName"> Traveler Name</label><br>
+    <input type="text" id="wandererName" name="wandererName">
+    <label for="wandererName"> Wanderer Name</label><br><br>
+
+
+    <input type="checkbox" id="Weapons" name="Weapons">
+    <label for="Weapons"> Weapons</label><br>
+    <label for="minWeaponRarity">Minimum Weapon Rarity 1-5 star:</label>
+    <input type="number" id="minWeaponRarity" name="minWeaponRarity" min="1" max="5" value="1"><br><br>
+
+    <input type="checkbox" id="Artifacts" name="Artifacts">
+    <label for="Artifacts"> Artifacts</label><br>
+    <label for="minArtifactRarity">Minimum Artifact Rarity 1-5 star:</label>
+    <input type="number" id="minArtifactRarity" name="minArtifactRarity" min="1" max="5" value="1"><br><br>
+
+
+    <button type="button" id="beginMassScan" onclick="beginMassScan(
+        document.getElementById('Achievements').checked, 
+        document.getElementById('Characters').checked, 
+        document.getElementById('travelerName').value,
+        document.getElementById('wandererName').value,  
+        document.getElementById('Weapons').checked, 
+        document.getElementById('minWeaponRarity').value,
+        document.getElementById('Artifacts').checked,
+        document.getElementById('minArtifactRarity').value
+        )">Begin Mass Scan
+    </button><br><br>
+
+    <button type="button" id="beginSingleScanCharacter" onclick="beginSingleScan('characters')">Scan Current Character</button><br>
+    <button type="button" id="beginSingleScanWeapon" onclick="beginSingleScan('weapons')">Scan Current Weapon</button><br>
+    <button type="button" id="beginSingleScanArtifact" onclick="beginSingleScan('artifacts')">Scan Current Artifact</button><br><br>
+
+    <button type="button" id="exportData" onclick="exportData(
+        document.getElementById('AchievementMerge').checked, 
+        document.getElementById('PaimonMoeData').files[0]
+    )">Export Data To File</button>
+
+</html>
